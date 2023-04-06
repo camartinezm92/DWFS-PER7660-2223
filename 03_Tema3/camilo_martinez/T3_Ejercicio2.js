@@ -9,12 +9,27 @@
  * 
  * Duplicador
  * 
- * Se pide: Mediante funciones de primer orden, crear una funcion duplicador que recibe como argumento un array de numeros y devuelve otro array duplicando aquellos que sean pares
+ * Se pide: Mediante funciones de primer orden, crear una funcion duplicador que recibe como argumento
+ * un array de numeros y devuelve otro array duplicando aquellos que sean pares
  * El tamaño del array resultado, por tanto, podra ser distinto del tamaño del array original
  * 
  * Ejemplo: duplicador([1,2,3,4]) -> [4,8]
  */
 
+var lista= [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+
+
+const dob = function doble(lista){
+    let linst2 = [];
+    for (let i=0; i<=lista.length; i++){
+        if(lista[i]%2 === 0){
+            linst2.push(lista[i]*2);
+        }
+    }
+    console.log('duplicado ['+ lista + '] --> ['+linst2+']');
+}
+
+dob(lista);
 
 
 /**
@@ -26,7 +41,19 @@
  * 
  * Ejemplo: media([1,2,3,4]) -> 2.5
  */
+var array = [1,2,3,4];
+var suma =0;
 
+const media = function sum(array){
+    for (x=0;x<array.length;x++){
+        suma+=array[x];
+        console.log(suma);
+    }
+    let medio = suma/(array.length)
+    console.log('media de '+array + '-->'+medio)
+}
+
+media(array);
 
 
 /**
@@ -34,11 +61,19 @@
  * 
  * Eliminar duplicados
  * 
- * Se pide: Mediante funciones de primer orden, crear una funcion eliminarDuplicados que recibe como argumento un array de numeros con duplicados y devuelve otro cuyos elementos son unicos
- * Se valoraran especialmente soluciones donde sea necesario recorrer el array pasado como argumento una unica vez (de una pasada)
+ * Se pide: Mediante funciones de primer orden, crear una funcion eliminar
+ * Duplicados que recibe como argumento un array de numeros con duplicados 
+ * y devuelve otro cuyos elementos son unicos
+ * Se valoraran especialmente soluciones donde sea necesario recorrer el 
+ * array pasado como argumento una unica vez (de una pasada)
  * 
  * Ejemplo: eliminarDuplicados([5,1,2,1,3,3,4,5]) -> [2,4]
  */
+let data = [5,1,2,1,3,3,4,5];
+
+const dataArr = new Set(data);
+
+console.log(dataArr);
 
 
 /**

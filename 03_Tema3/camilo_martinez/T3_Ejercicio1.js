@@ -102,17 +102,29 @@ console.log(foramtStr(texto));
 ; */
 
 var normal =[];
-var text = 'oracionsinsentido';
-var esPalindormoR = false;
-var reverse = text.reverse();
-
+var revers =[];
+var text = 'Dabale arroz a la Zorra el abad';
+var esPalindormoR = '';
 function esPalindromo(text){
     let frase = text.toLowerCase();
     for (i of frase){
-        if(frase[i]=== reverse[i]){
-            esPalindormoR=true;
+        if (i=== " "){
+            continue;
+        }else{
+            normal.push(i);
         }
-    console.log(esPalindormoR);
+    }
+    for (let i = normal.length - 1; i >= 0; i--) {
+        revers.push(normal[i]);
+    }
+    for (let j =0;j<=normal.length;j++){
+        if(normal[j] === revers[j]){
+            esPalindormoR=true;
+        }else{
+            esPalindormoR=false;
+            break;
+        }
+    }
+    return esPalindormoR;
 }
-}
-esPalindromo(text);
+console.log(text + '-->' + esPalindromo(text));
